@@ -1,4 +1,4 @@
-import '@folio-eis/marva-next';
+import {} from '@folio-eis/marva-next';
 
 
 const Wrapper = (props) => {
