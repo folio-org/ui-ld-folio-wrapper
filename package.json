@@ -57,7 +57,7 @@
     "prop-types": "^15.6.0",
     "react-select": "^5.7.3",
     "save": "^2.9.0",
-    "@folio-eis/marva-next": "0.0.100046"
+    "@folio-eis/marva-next": "0.0.100051"
   },
   "peerDependencies": {
     "@folio/stripes": "^7.0.0",
