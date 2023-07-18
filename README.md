@@ -49,4 +49,3 @@ Read the [Stripes Module Developer's Guide](https://github.com/folio-org/stripes
 When your new UI app is ready and being built by CI, then adjust its Jenkinsfile to remove the `npmDeploy = 'no'` parameter (which is then superfluous).
 
 TODO: Modify this README to replace these sections about getting started, link to your issue tracker, etc.
-
