@@ -59,6 +59,9 @@
     "save": "^2.9.0",
     "@folio-eis/marva-next": "0.0.100078"
   },
+  "resolutions": {
+    "favicons-webpack-plugin": "6.0.0"
+  },
   "peerDependencies": {
     "@folio/stripes": "^7.0.0",
     "react": "*",
