@@ -1,36 +1,28 @@
 import '@folio-eis/marva-next';
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const OKAPI_CONFIG = 'okapi_config';
-
-const Wrapper = ({ stripes }) => {
-  useEffect(() => {
-    // url, tenant, token, locale, tz
-    const {
-      locale,
-      timezone,
-      okapi: {
-        url,
-        tenant,
-        token
-      },
-    } = stripes || {};
-
-    const config = {
-      locale,
-      timezone,
+const Wrapper = ({
+  stripes: {
+    locale,
+    timezone,
+    okapi: {
       url,
       tenant,
-      token,
-    };
-
-    localStorage.setItem(OKAPI_CONFIG, JSON.stringify(config));
-  }, [stripes]);
+      token
+    },
+  },
+}) => {
+  const config = {
+    locale,
+    timezone,
+    basePath: url,
+    tenant,
+    token,
+  };
 
   return (
     <div id="editor-root" style={{ margin: '1em' }}>
-      <marva-next route-prefix="/marva" />
+      <marva-next route-prefix="/marva" config={JSON.stringify(config)} />
     </div>
   );
 };
