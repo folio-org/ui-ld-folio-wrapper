@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "@folio-eis/marva-next": "0.0.100098"
+    "@folio-eis/marva-next": "0.0.100099"
   },
   "resolutions": {
     "favicons-webpack-plugin": "6.0.0"
