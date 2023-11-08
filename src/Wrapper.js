@@ -1,15 +1,11 @@
-import '@folio-eis/marva-next';
-import PropTypes from 'prop-types';
+import "@folio-eis/marva-next";
+import PropTypes from "prop-types";
 
 const Wrapper = ({
   stripes: {
     locale,
     timezone,
-    okapi: {
-      url,
-      tenant,
-      token
-    },
+    okapi: { url, tenant, token },
   },
 }) => {
   const config = {
@@ -21,7 +17,7 @@ const Wrapper = ({
   };
 
   return (
-    <div id="editor-root" style={{ margin: '1em' }}>
+    <div id="editor-root">
       <marva-next route-prefix="/marva" config={JSON.stringify(config)} />
     </div>
   );
