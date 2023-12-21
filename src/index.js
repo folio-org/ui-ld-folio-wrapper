@@ -1,12 +1,10 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import Wrapper from './Wrapper';
-
 import Settings from './settings';
+import './index.css';
 
 class Marva extends React.Component {
   static propTypes = {

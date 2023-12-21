@@ -2,6 +2,7 @@ import '@folio-eis/marva-next';
 import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 import { Prompt, useHistory } from 'react-router';
+import css from './index.css';
 
 const CUSTOM_EVENTS = {
   BLOCK_NAVIGATION: 'blocknavigation',
@@ -61,7 +62,7 @@ const Wrapper = ({
   };
 
   return (
-    <div id="editor-root">
+    <div id="editor-root" className={css.wrapper}>
       <Prompt
         when={isBlocking}
         message={handleBlockedNavigation}

@@ -1,0 +1,9 @@
+marva-next {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  height: calc(100vh - 50px);
+}
