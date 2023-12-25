@@ -5,5 +5,11 @@ marva-next {
 }
 
 .wrapper {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 56px);
+}
+
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    height: calc(100vh - 48px);
+  }
 }
