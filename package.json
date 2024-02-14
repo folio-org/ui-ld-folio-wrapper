@@ -71,8 +71,15 @@
       "app",
       "settings"
     ],
-    "displayName": "Marva Editor",
+    "displayName": "MARVA Editor",
     "route": "/marva",
+    "icons": [
+      {
+        "name": "app",
+        "alt": "",
+        "title": "MARVA editor"
+      }
+    ],
     "okapiInterfaces": {},
     "permissionSets": [
       {
@@ -96,4 +103,3 @@
     ]
   }
 }
-
