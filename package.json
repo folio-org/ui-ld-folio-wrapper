@@ -71,7 +71,7 @@
       "app",
       "settings"
     ],
-    "displayName": "MARVA Editor",
+    "displayName": "MARVA editor",
     "route": "/marva",
     "icons": [
       {
