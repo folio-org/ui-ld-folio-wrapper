@@ -73,6 +73,7 @@
     ],
     "displayName": "MARVA editor",
     "route": "/marva",
+    "home": "/marva/search",
     "icons": [
       {
         "name": "app",
