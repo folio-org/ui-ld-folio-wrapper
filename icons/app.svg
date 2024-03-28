@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Icon Artboard</title>
-    <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.0714415%" id="linearGradient-1">
-            <stop stop-color="#3D9BD4" offset="0%"></stop>
-            <stop stop-color="#1E60A6" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Icon-Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="BG" fill="url(#linearGradient-1)">
-            <rect x="0" y="0" width="1024" height="1024"></rect>
-        </g>
-        <text id="M" font-family="SourceSansPro-Bold, Source Sans Pro" font-size="745" font-weight="bold" letter-spacing="21.2857146" fill="#FFFFFF">
-            <tspan x="232" y="757">M</tspan>
-        </text>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="214.29" y1="931.98" x2="214.29" y2="931.01" gradientTransform="translate(-218922 954345.19) scale(1024 -1024)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3d9bd4"/>
+      <stop offset="1" stop-color="#1e60a6"/>
+    </linearGradient>
+  </defs>
+  <g id="Icon-Artboard">
+    <g id="BG">
+      <rect class="cls-1" width="1024" height="1024"/>
     </g>
+    <g id="M" class="cls-3">
+      <g class="cls-3">
+        <path class="cls-2" d="m254.45,778.64V245.36h161.15l96.76,363.77,95.67-363.77h161.51v533.29h-100.04v-419.79l-105.86,419.79h-103.67l-105.49-419.79v419.79h-100.04Z"/>
+      </g>
+    </g>
+  </g>
 </svg>
