@@ -1,55 +1,51 @@
-# ui-bf-folio-wrapper
+# ui-marva
 
-## Dependencies
+Copyright (C) 2021 The Open Library Foundation
 
-This module requires the following components to function:
+This software is distributed under the terms of the Apache License, Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
 
-1. [`@folio-eis/marva-next`](https://github.com/FOLIO-EIS/ui-linked-data) (also known as `ui-linked-data`, `marva-next`). This module needs to be built as a library in order for `ui-bf-folio-wrapper` to work. Refer to point 1 from its [Usage: As an embedded application](https://github.com/FOLIO-EIS/ui-linked-data?tab=readme-ov-file#as-an-embedded-application) section on how to do so.
+## Introduction
+
+Congratulations on creating a new Stripes UI app module!  Follow the instructions below to run ui-marva and start your development.
+
+TODO: Modify this README to replace these sections about getting started.
 
 ## Prerequisites
 
-### Install Stripes CLI
+In order to view and log into the platform being served up, a suitable Okapi backend will need to be running. The [testing-backend](https://app.vagrantup.com/folio/boxes/testing-backend) Vagrant box should work if your app does not yet have its own backend module.
 
-- [Install guidelines](https://github.com/folio-org/stripes-cli/blob/master/README.md)
+## Run your new app
 
-### Link @folio-eis/marva-next package locally
-
-1. From within the `@folio-eis/marva-next` (`ui-linked-data`) repository on your machine, run `yarn link`
-
-## Run within the Stripes platform
-
-1. Open the terminal and run `stripes workspace`
-2. From the list of options presented to you, select the platform named `platform-complete`. If necessary, select modules, additional libraries, plugins. Press Enter.
-3. If the previous step was successful, the folder you ran the `stripes workspace` command in will now contain a folder named `stripes`. Clone the `ui-bf-folio-wrapper` repository into the `stripes` folder.
-4. From within the `ui-bf-folio-wrapper` folder run `yarn link @folio-eis/marva-next`
-5. Temporarily remove the `"@folio-eis/marva-next": "*"` from the `dependencies` field of `ui-bf-folio-wrapper`'s `package.json`.
-6. From within the `stripes` folder, run `yarn`.
-7. Bring back the `"@folio-eis/marva-next": "*"` field to the `dependencies` field of `ui-bf-folio-wrapper`'s `package.json`.
-8. Go to `platform-complete` folder and modify `stripes.config.js.local` file. It should have the structure described below:
-
-```json
-module.exports = {
-  okapi: { 'url':'https://okapi-missinglinks.int.aws.folio.org', 'tenant':'fs09000000' },
-  config: {
-    logCategories: 'core,path,action,xhr',
-    logPrefix: '--',
-    maxUnpagedResourceCount: 2000,
-    showPerms: false,
-    preserveConsole: true,
-  },
-  modules: {
-    '@folio-eis/bf-folio-wrapper': '../ui-bf-folio-wrapper',
-  },
-  branding: {
-    logo: {
-      src: './tenant-assets/opentown-libraries-logo.png',
-      alt: 'Opentown Libraries',
-    },
-    favicon: {
-      src: './tenant-assets/opentown-libraries-favicon.png',
-    },
-  }
-};
+Run the following from the ui-marva directory to serve your new app using a development server:
+```
+stripes serve
 ```
 
-9. Within `platform-complete` folder, run `stripes serve stripes.config.js.local --tenant fs09000000 --okapi https://okapi-missinglinks.int.aws.folio.org --hasAllPerms`
+Note: When serving up a newly created app that does not have its own backend permissions established, pass the `--hasAllPerms` option to display the app in the UI navigation. For example:
+```
+stripes serve --hasAllPerms
+```
+
+To specify your own tenant ID or to use an Okapi instance other than `http://localhost:9130` pass the `--okapi` and `--tenant` options.
+```
+stripes serve --okapi http://my-okapi.example.com:9130 --tenant my-tenant-id
+```
+
+## Run the tests
+
+Run the included UI tests with the following command:
+```
+stripes test karma
+```
+
+## What to do next?
+
+Now that your new app is running, search the code for "`new-app`" to find comments and subbed placeholders that may need your attention.
+
+Please remove or customize the sample strings in `en.json` (lines 3-10) before merging this file to master; the translators do not need to be providing translations for these sample strings.
+
+Read the [Stripes Module Developer's Guide](https://github.com/folio-org/stripes/blob/master/doc/dev-guide.md).
+
+When your new UI app is ready and being built by CI, then adjust its Jenkinsfile to remove the `npmDeploy = 'no'` parameter (which is then superfluous).
+
+TODO: Modify this README to replace these sections about getting started, link to your issue tracker, etc.
