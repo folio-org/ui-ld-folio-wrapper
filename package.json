@@ -71,14 +71,14 @@
       "app",
       "settings"
     ],
-    "displayName": "MARVA editor",
-    "route": "/marva",
-    "home": "/marva/search",
+    "displayName": "Linked data editor",
+    "route": "/linked-data",
+    "home": "/linked-data/search",
     "icons": [
       {
         "name": "app",
         "alt": "",
-        "title": "MARVA editor"
+        "title": "Linked data editor"
       }
     ],
     "okapiInterfaces": {},

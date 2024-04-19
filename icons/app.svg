@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
   <defs>
     <style>
       .cls-1 {
@@ -14,18 +14,18 @@
         isolation: isolate;
       }
     </style>
-    <linearGradient id="linear-gradient" x1="214.29" y1="931.98" x2="214.29" y2="931.01" gradientTransform="translate(-218922 954345.19) scale(1024 -1024)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="-285.71" y1="431.49" x2="-285.71" y2="431.47" gradientTransform="translate(292578 441845.19) scale(1024 -1024)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#3d9bd4"/>
       <stop offset="1" stop-color="#1e60a6"/>
     </linearGradient>
   </defs>
   <g id="Icon-Artboard">
     <g id="BG">
-      <rect class="cls-1" width="1024" height="1024"/>
+      <rect class="cls-1" width="24" height="24"/>
     </g>
     <g id="M" class="cls-3">
       <g class="cls-3">
-        <path class="cls-2" d="m254.45,778.64V245.36h161.15l96.76,363.77,95.67-363.77h161.51v533.29h-100.04v-419.79l-105.86,419.79h-103.67l-105.49-419.79v419.79h-100.04Z"/>
+        <path class="cls-2" d="m7.6,18.2V5.8h2.52v10.29h6.28v2.11H7.6Z"/>
       </g>
     </g>
   </g>

@@ -1,13 +1,13 @@
-import '@folio-eis/marva-next';
-import PropTypes from 'prop-types';
-import { useEffect, useRef, useState } from 'react';
-import { Prompt, useHistory } from 'react-router';
-import css from './index.css';
+import "@folio-eis/marva-next";
+import PropTypes from "prop-types";
+import { useEffect, useRef, useState } from "react";
+import { Prompt, useHistory } from "react-router";
+import css from "./index.css";
 
 const CUSTOM_EVENTS = {
-  BLOCK_NAVIGATION: 'blocknavigation',
-  PROCEED_NAVIGATION: 'proceednavigation',
-  TRIGGER_MODAL: 'triggermodal',
+  BLOCK_NAVIGATION: "blocknavigation",
+  PROCEED_NAVIGATION: "proceednavigation",
+  TRIGGER_MODAL: "triggermodal",
 };
 
 const Wrapper = ({
@@ -18,7 +18,7 @@ const Wrapper = ({
   },
 }) => {
   const [isBlocking, setIsBlocking] = useState(false);
-  const [lastLocation, setLastLocation] = useState<Location | null>(null);
+  const [lastLocation, setLastLocation] = useState(null);
   const [confirmedNavigation, setConfirmedNavigation] = useState(false);
   const marvaComponent = useRef(null);
   const history = useHistory();
@@ -33,11 +33,17 @@ const Wrapper = ({
 
   useEffect(() => {
     if (marvaComponent && marvaComponent.current) {
-      marvaComponent.current.addEventListener(CUSTOM_EVENTS.BLOCK_NAVIGATION, () => {
-        setIsBlocking(true);
-        setConfirmedNavigation(false);
-      });
-      marvaComponent.current.addEventListener(CUSTOM_EVENTS.PROCEED_NAVIGATION, () => setConfirmedNavigation(true));
+      marvaComponent.current.addEventListener(
+        CUSTOM_EVENTS.BLOCK_NAVIGATION,
+        () => {
+          setIsBlocking(true);
+          setConfirmedNavigation(false);
+        }
+      );
+      marvaComponent.current.addEventListener(
+        CUSTOM_EVENTS.PROCEED_NAVIGATION,
+        () => setConfirmedNavigation(true)
+      );
     }
   }, [marvaComponent]);
 
@@ -49,7 +55,9 @@ const Wrapper = ({
 
   const handleBlockedNavigation = (nextLocation) => {
     if (marvaComponent.current) {
-      marvaComponent.current.dispatchEvent(new CustomEvent(CUSTOM_EVENTS.TRIGGER_MODAL));
+      marvaComponent.current.dispatchEvent(
+        new CustomEvent(CUSTOM_EVENTS.TRIGGER_MODAL)
+      );
     }
 
     if (!confirmedNavigation && isBlocking) {
@@ -63,11 +71,12 @@ const Wrapper = ({
 
   return (
     <div id="editor-root" className={css.wrapper}>
-      <Prompt
-        when={isBlocking}
-        message={handleBlockedNavigation}
+      <Prompt when={isBlocking} message={handleBlockedNavigation} />
+      <marva-next
+        ref={marvaComponent}
+        route-prefix="/linked-data"
+        config={JSON.stringify(config)}
       />
-      <marva-next ref={marvaComponent} route-prefix="/marva" config={JSON.stringify(config)} />
     </div>
   );
 };
