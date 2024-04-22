@@ -74,7 +74,7 @@ const Wrapper = ({
       <Prompt when={isBlocking} message={handleBlockedNavigation} />
       <marva-next
         ref={marvaComponent}
-        route-prefix="/linked-data"
+        route-prefix="/linked-data-editor"
         config={JSON.stringify(config)}
       />
     </div>

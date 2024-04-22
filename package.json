@@ -72,8 +72,8 @@
       "settings"
     ],
     "displayName": "Linked data editor",
-    "route": "/linked-data",
-    "home": "/linked-data/search",
+    "route": "/linked-data-editor",
+    "home": "/linked-data-editor/search",
     "icons": [
       {
         "name": "app",
