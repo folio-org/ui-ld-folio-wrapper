@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { Prompt, useHistory } from "react-router";
 import css from "./index.css";
 
+const ROUTE_PREFIX = "/linked-data-editor";
+const HOMEPAGE_URI = "/search";
+const SEARCH_VIEW_ELEM_ID = "ld-search-container";
 const CUSTOM_EVENTS = {
   BLOCK_NAVIGATION: "blocknavigation",
   PROCEED_NAVIGATION: "proceednavigation",
@@ -32,7 +35,7 @@ const Wrapper = ({
   };
 
   useEffect(() => {
-    if (marvaComponent && marvaComponent.current) {
+    if (marvaComponent?.current) {
       marvaComponent.current.addEventListener(
         CUSTOM_EVENTS.BLOCK_NAVIGATION,
         () => {
@@ -52,6 +55,16 @@ const Wrapper = ({
       history.push(lastLocation.pathname);
     }
   }, [confirmedNavigation, history, lastLocation]);
+
+  useEffect(() => {
+    if (
+      history.location?.pathname?.includes(HOMEPAGE_URI) &&
+      marvaComponent?.current &&
+      !document.getElementById(SEARCH_VIEW_ELEM_ID)
+    ) {
+      marvaComponent.current?.remount();
+    }
+  }, [history.location]);
 
   const handleBlockedNavigation = (nextLocation) => {
     if (marvaComponent.current) {
@@ -74,7 +87,7 @@ const Wrapper = ({
       <Prompt when={isBlocking} message={handleBlockedNavigation} />
       <marva-next
         ref={marvaComponent}
-        route-prefix="/linked-data-editor"
+        route-prefix={ROUTE_PREFIX}
         config={JSON.stringify(config)}
       />
     </div>
