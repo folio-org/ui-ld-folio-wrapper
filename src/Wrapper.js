@@ -6,7 +6,7 @@ import css from "./index.css";
 
 const ROUTE_PREFIX = "/linked-data-editor";
 const HOMEPAGE_URI = "/search";
-const SEARCH_VIEW_ELEM_ID = "ld-search-container";
+// const SEARCH_VIEW_ELEM_ID = "ld-search-container";
 const CUSTOM_EVENTS = {
   BLOCK_NAVIGATION: "blocknavigation",
   PROCEED_NAVIGATION: "proceednavigation",
@@ -59,8 +59,10 @@ const Wrapper = ({
   useEffect(() => {
     if (
       history.location?.pathname?.includes(HOMEPAGE_URI) &&
-      marvaComponent?.current &&
-      !document.getElementById(SEARCH_VIEW_ELEM_ID)
+      marvaComponent?.current
+      // uncomment to refresh only if the component is not
+      // present in the document
+      // && !document.getElementById(SEARCH_VIEW_ELEM_ID)
     ) {
       marvaComponent.current?.remount();
     }
