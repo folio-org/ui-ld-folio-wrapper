@@ -1,7 +1,7 @@
 {
   "name": "@folio-eis/bf-folio-wrapper",
   "version": "1.2.0",
-  "description": "Marva",
+  "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
   "repository": "",
   "license": "Apache-2.0",
@@ -84,23 +84,36 @@
     "okapiInterfaces": {},
     "permissionSets": [
       {
-        "permissionName": "module.marva.enabled",
-        "displayName": "UI: Marva module is enabled",
+        "permissionName": "module.bf-folio-wrapper.enabled",
+        "displayName": "Linked Data: Module is enabled",
         "visible": true,
         "subPermissions": [
-          "linked.data.bibframe.get",
-          "linked.data.bibframe.post",
+        ]
+      },
+      {
+        "permissionName": "ui-linked-data.all",
+        "displayName": "Linked Data: All Permissions",
+        "visible": true,
+        "subPermissions": [
+          "module.bf-folio-wrapper.enabled",
+          "linked-data.resources.bib.get",
+          "linked-data.resources.bib.post",
+          "linked-data.resources.bib.put",
+          "linked-data.resources.bib.delete",
+          "linked-data.resources.bib.marc.get",
+          "linked-data.resources.reindex.post",
+          "linked-data.resources.graph.get",
+          "linked-data.profiles.get",
           "search.linked-data.work.collection.get",
           "search.linked-data.authority.collection.get"
         ]
       },
       {
-        "permissionName": "settings.marva.enabled",
-        "displayName": "Settings (marva): display list of settings pages",
+        "permissionName": "settings.bf-folio-wrapper.enabled",
+        "displayName": "Settings (Linked Data): display list of settings pages",
         "subPermissions": [
           "settings.enabled"
-        ],
-        "visible": true
+        ]
       }
     ]
   }
