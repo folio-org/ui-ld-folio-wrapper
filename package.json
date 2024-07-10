@@ -25,9 +25,9 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.9.0",
     "@folio/eslint-config-stripes": "^6.0.0",
-    "@folio/stripes": "^7.0.0",
-    "@folio/stripes-cli": "^2.6.0 || ^2.4.0",
-    "@folio/stripes-core": "^8.0.0",
+    "@folio/stripes": "^9.0.0",
+    "@folio/stripes-cli": "^3.1.0",
+    "@folio/stripes-core": "^10.1.1",
     "@formatjs/cli": "^4.2.29",
     "@jest/globals": "^26.6.2",
     "@testing-library/dom": "^7.26.3",
@@ -44,11 +44,11 @@
     "jest-canvas-mock": "^2.3.0",
     "jest-junit": "^12.0.0",
     "mocha": "^5.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-intl": "^5.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "^6.4.4",
     "react-redux": "^7.2.2",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^5.0.1",
     "redux": "^4.0.5",
     "regenerator-runtime": "^0.13.3"
   },
@@ -60,11 +60,11 @@
     "favicons-webpack-plugin": "6.0.0"
   },
   "peerDependencies": {
-    "@folio/stripes": "^7.0.0",
+    "@folio/stripes": "^9.0.0",
     "react": "*",
-    "react-intl": "^5.8.0",
+    "react-intl": "^6.4.4",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.0.1"
   },
   "stripes": {
     "actsAs": [
@@ -87,8 +87,7 @@
         "permissionName": "module.bf-folio-wrapper.enabled",
         "displayName": "Linked Data: Module is enabled",
         "visible": true,
-        "subPermissions": [
-        ]
+        "subPermissions": []
       },
       {
         "permissionName": "ui-linked-data.all",
