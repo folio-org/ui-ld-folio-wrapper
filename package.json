@@ -102,6 +102,7 @@
           "linked-data.resources.bib.marc.get",
           "linked-data.resources.reindex.post",
           "linked-data.resources.graph.get",
+          "linked-data.resources.bib.id.get",
           "linked-data.profiles.get",
           "search.linked-data.work.collection.get",
           "search.linked-data.authority.collection.get"
