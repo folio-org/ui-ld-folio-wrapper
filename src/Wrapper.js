@@ -9,6 +9,7 @@ const HOMEPAGE_URI = "/search";
 // const SEARCH_VIEW_ELEM_ID = "ld-search-container";
 const CUSTOM_EVENTS = {
   BLOCK_NAVIGATION: "blocknavigation",
+  UNBLOCK_NAVIGATION: "unblocknavigation",
   PROCEED_NAVIGATION: "proceednavigation",
   TRIGGER_MODAL: "triggermodal",
 };
@@ -44,8 +45,15 @@ const Wrapper = ({
         }
       );
       marvaComponent.current.addEventListener(
+        CUSTOM_EVENTS.UNBLOCK_NAVIGATION,
+        () => setIsBlocking(false)
+      );
+      marvaComponent.current.addEventListener(
         CUSTOM_EVENTS.PROCEED_NAVIGATION,
-        () => setConfirmedNavigation(true)
+        () => {
+          setIsBlocking(false);
+          setConfirmedNavigation(true);
+        }
       );
     }
   }, [marvaComponent]);
@@ -69,6 +77,12 @@ const Wrapper = ({
   }, [history.location]);
 
   const handleBlockedNavigation = (nextLocation) => {
+    const { pathname } = nextLocation ?? {};
+    // let the module handle navigation blocking within itself on its own
+    // except going to the module's main page with unsaved changes
+    if (pathname.includes(ROUTE_PREFIX) && !pathname.includes(HOMEPAGE_URI))
+      return;
+
     if (marvaComponent.current) {
       marvaComponent.current.dispatchEvent(
         new CustomEvent(CUSTOM_EVENTS.TRIGGER_MODAL)
