@@ -96,6 +96,7 @@
         "subPermissions": [
           "module.bf-folio-wrapper.enabled",
           "linked-data.resources.bib.get",
+          "linked-data.resources.bib.item.get",
           "linked-data.resources.bib.post",
           "linked-data.resources.bib.put",
           "linked-data.resources.bib.delete",
