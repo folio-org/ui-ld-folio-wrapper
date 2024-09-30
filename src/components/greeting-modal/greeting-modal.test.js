@@ -8,7 +8,7 @@ import { FormattedMessage } from 'react-intl';
 import '../../../test/jest/__mock__';
 import GreetingModal from './greeting-modal';
 
-const label = <FormattedMessage id="ui-marva.new-app.greeting" />;
+const label = <FormattedMessage id="ld.new-app.greeting" />;
 
 const renderGreetingModal = () => {
   return render(

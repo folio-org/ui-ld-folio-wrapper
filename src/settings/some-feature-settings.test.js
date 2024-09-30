@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl';
 import '../../test/jest/__mock__';
 import SomeFeatureSettings from './some-feature-settings';
 
-const label = <FormattedMessage id="ui-marva.settings.some-feature" />;
+const label = <FormattedMessage id="ld.settings.some-feature" />;
 
 const renderSomeFeatureSettingsPage = () => {
   const history = createMemoryHistory();

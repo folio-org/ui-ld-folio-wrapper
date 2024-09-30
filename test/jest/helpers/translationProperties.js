@@ -1,11 +1,11 @@
 import stripesComponentsTranslations from '@folio/stripes-components/translations/stripes-components/en';
 import stripesCoreTranslations from '@folio/stripes-core/translations/stripes-core/en';
 
-import translations from '../../../translations/ui-marva/en';
+import translations from '../../../translations/ui-linked-data/en';
 
 const translationsProperties = [
   {
-    prefix: 'ui-marva',
+    prefix: 'ui-linked-data',
     translations,
   },
   {

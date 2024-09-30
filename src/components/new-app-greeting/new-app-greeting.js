@@ -6,9 +6,9 @@ export default class NewAppGreeting extends React.Component {
     return (
       <div>
         <h2 data-test-application-greeting>
-          <FormattedMessage id="ui-marva.new-app.greeting" />
+          <FormattedMessage id="ld.new-app.greeting" />
         </h2>
-        <FormattedMessage id="ui-marva.new-app.message" />
+        <FormattedMessage id="ld.new-app.message" />
       </div>
     );
   }

@@ -95,7 +95,7 @@ export default class ExamplePage extends React.Component {
           healthyInstances: <b>{healthyInstances}</b>,
           notHealthyInstances: <b>{notHealthyInstances}</b>
         }}
-        id="ui-marva.example-page.health-summary"
+        id="ld.example-page.health-summary"
       />
     );
   }
@@ -111,7 +111,7 @@ export default class ExamplePage extends React.Component {
           These columns are created with Paneset and Pane components.
           <hr />
           <div data-test-example-page-home>
-            <Link to="marva">home page</Link>
+            <Link to="linked-data">home page</Link>
           </div>
         </Pane>
         <Pane defaultWidth="80%" paneTitle="Some Stripes Components">
@@ -125,7 +125,7 @@ export default class ExamplePage extends React.Component {
             size="small"
             margin="medium"
           >
-            <FormattedMessage id="ui-marva.example-page.sample-request" />
+            <FormattedMessage id="ld.example-page.sample-request" />
           </Headline>
           {healthResourceAvaliable
             ? this.renderHealthSummary()

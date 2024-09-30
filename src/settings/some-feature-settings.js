@@ -12,7 +12,7 @@ export default class FeatureSettings extends React.Component {
     return (
       <Pane defaultWidth="fill" fluidContentWidth paneTitle={this.props.label}>
         <div data-test-application-settings-feature-message>
-          <FormattedMessage id="ui-marva.settings.some-feature.message" />
+          <FormattedMessage id="ld.settings.some-feature.message" />
         </div>
       </Pane>
     );

@@ -1,4 +1,4 @@
-# Change history for ui-marva
+# Change history for ui-linked-data
 
 ## 1.1.0 (IN PROGRESS)
 
