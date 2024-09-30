@@ -1,4 +1,4 @@
-import "@folio-eis/marva-next";
+import "@folio-eis/linked-data";
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 import { Prompt, useHistory } from "react-router";
@@ -101,7 +101,7 @@ const Wrapper = ({
   return (
     <div id="editor-root" className={css.wrapper}>
       <Prompt when={isBlocking} message={handleBlockedNavigation} />
-      <marva-next
+      <linked-data
         ref={marvaComponent}
         route-prefix={ROUTE_PREFIX}
         config={JSON.stringify(config)}

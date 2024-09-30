@@ -13,7 +13,7 @@ TODO: Modify this README to replace these sections about getting started.
 ## Dependencies
 This module requires the following components to function:
 
-1. [`@folio-eis/marva-next`](https://github.com/FOLIO-EIS/ui-linked-data) (also known as `ui-linked-data`, `marva-next`). This module needs to be built as a library in order for `ui-bf-folio-wrapper` to work. Refer to point 1 from its [Usage: As an embedded application](https://github.com/FOLIO-EIS/ui-linked-data?tab=readme-ov-file#as-an-embedded-application) section on how to do so.
+1. [`@folio-eis/linked-data`](https://github.com/FOLIO-EIS/ui-linked-data) (also known as `ui-linked-data`, `linked-data`). This module needs to be built as a library in order for `ui-bf-folio-wrapper` to work. Refer to point 1 from its [Usage: As an embedded application](https://github.com/FOLIO-EIS/ui-linked-data?tab=readme-ov-file#as-an-embedded-application) section on how to do so.
 
 ## Prerequisites
 
