@@ -14,12 +14,12 @@ export default class MarvaSettings extends React.Component {
   pages = [
     {
       route: 'general',
-      label: <FormattedMessage id="ld.settings.general" />,
+      label: <FormattedMessage id="ui-linked-data.settings.general" />,
       component: GeneralSettings,
     },
     {
       route: 'somefeature',
-      label: <FormattedMessage id="ld.settings.some-feature" />,
+      label: <FormattedMessage id="ui-linked-data.settings.some-feature" />,
       component: SomeFeatureSettings,
     },
   ];

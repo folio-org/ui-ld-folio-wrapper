@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl';
 import '../../../test/jest/__mock__';
 import NewAppGreeting from './new-app-greeting';
 
-const label = <FormattedMessage id="ld.new-app.greeting" />;
+const label = <FormattedMessage id="ui-linked-data.new-app.greeting" />;
 
 const renderGreetingPage = () => {
   const history = createMemoryHistory();
