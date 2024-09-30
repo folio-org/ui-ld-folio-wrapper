@@ -12,7 +12,7 @@
     "start": "stripes serve",
     "build": "stripes build --output ./output",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
-    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-marva ./translations/ui-marva/compiled",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-linked-data ./translations/ui-linked-data/compiled",
     "lint": "eslint .",
     "test": "jest"
   },
@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "@folio-eis/marva-next": "^1.0.1"
+    "@folio-eis/linked-data": "^1.0.1"
   },
   "resolutions": {
     "favicons-webpack-plugin": "6.0.0"
