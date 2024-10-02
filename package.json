@@ -1,5 +1,5 @@
 {
-  "name": "@folio-eis/bf-folio-wrapper",
+  "name": "@folio-eis/ld-folio-wrapper",
   "version": "1.2.0",
   "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
