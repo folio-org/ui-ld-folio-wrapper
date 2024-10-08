@@ -1,5 +1,5 @@
 {
-  "name": "@folio/ld-folio-wrapper",
+  "name": "@folio-eis/ld-folio-wrapper",
   "repository": "@folio-eis/ui-ld-folio-wrapper",
   "version": "1.2.0",
   "description": "Linked Data Editor - Folio Wrapper",
