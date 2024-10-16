@@ -1,4 +1,4 @@
-import "@folio-eis/linked-data";
+import "@folio-org/linked-data";
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 import { Prompt, useHistory } from "react-router";
