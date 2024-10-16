@@ -1,6 +1,6 @@
 {
-  "name": "@folio-eis/ld-folio-wrapper",
-  "repository": "@folio-eis/ui-ld-folio-wrapper",
+  "name": "@folio-org/ld-folio-wrapper",
+  "repository": "@folio-org/ui-ld-folio-wrapper",
   "version": "1.2.0",
   "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "@folio-eis/linked-data": "^1.0.1"
+    "@folio-org/linked-data": "^1.0.1"
   },
   "resolutions": {
     "favicons-webpack-plugin": "6.0.0"
