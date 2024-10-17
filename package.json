@@ -4,7 +4,9 @@
   "version": "1.2.0",
   "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
-  "repository": "",
+  "publishConfig": {
+    "registry": "https://repository.folio.org/repository/npm-folioci/"
+  },
   "license": "Apache-2.0",
   "engines": {
     "node": ">=12.20.1"
