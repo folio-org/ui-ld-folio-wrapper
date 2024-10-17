@@ -1,10 +1,12 @@
 {
-  "name": "@folio-org/ld-folio-wrapper",
-  "repository": "@folio-org/ui-ld-folio-wrapper",
+  "name": "@folio/ld-folio-wrapper",
+  "repository": "@folio/ui-ld-folio-wrapper",
   "version": "1.2.0",
   "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
-  "repository": "",
+  "publishConfig": {
+    "registry": "https://repository.folio.org/repository/npm-folioci/"
+  },
   "license": "Apache-2.0",
   "engines": {
     "node": ">=12.20.1"
@@ -55,7 +57,7 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "@folio-org/linked-data": "^1.0.1"
+    "@folio/linked-data": "^1.0.1"
   },
   "resolutions": {
     "favicons-webpack-plugin": "6.0.0"
