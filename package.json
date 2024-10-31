@@ -15,7 +15,7 @@
     "start": "stripes serve",
     "build": "stripes build --output ./output",
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
-    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-linked-data ./translations/ui-linked-data/compiled",
+    "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-ld-folio-wrapper ./translations/ui-ld-folio-wrapper/compiled",
     "lint": "eslint .",
     "test": "jest"
   },

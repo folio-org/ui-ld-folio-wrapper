@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl';
 import '../../test/jest/__mock__';
 import Settings from './general-settings';
 
-const label = <FormattedMessage id="ui-linked-data.settings.general" />;
+const label = <FormattedMessage id="ui-ld-folio-wrapper.settings.general" />;
 
 const renderSettingsPage = () => {
   const history = createMemoryHistory();
