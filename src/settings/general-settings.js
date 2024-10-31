@@ -12,7 +12,7 @@ export default class GeneralSettings extends React.Component {
     return (
       <Pane defaultWidth="fill" fluidContentWidth paneTitle={this.props.label}>
         <div data-test-application-settings-general-message>
-          <FormattedMessage id="ui-linked-data.settings.general.message" />
+          <FormattedMessage id="ui-ld-folio-wrapper.settings.general.message" />
         </div>
       </Pane>
     );

@@ -6,9 +6,9 @@ export default class NewAppGreeting extends React.Component {
     return (
       <div>
         <h2 data-test-application-greeting>
-          <FormattedMessage id="ui-linked-data.new-app.greeting" />
+          <FormattedMessage id="ui-ld-folio-wrapper.new-app.greeting" />
         </h2>
-        <FormattedMessage id="ui-linked-data.new-app.message" />
+        <FormattedMessage id="ui-ld-folio-wrapper.new-app.message" />
       </div>
     );
   }
