@@ -2,7 +2,7 @@ import "@folio/linked-data";
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 import { Prompt, useHistory } from "react-router";
-import "./index.css";
+import css from "./index.css";
 
 const ROUTE_PREFIX = "/linked-data-editor";
 const HOMEPAGE_URI = "/search";
@@ -99,7 +99,7 @@ const Wrapper = ({
   };
 
   return (
-    <div id="editor-root" className="wrapper">
+    <div id="editor-root" className={css.wrapper}>
       <Prompt when={isBlocking} message={handleBlockedNavigation} />
       <linked-data
         ref={marvaComponent}
