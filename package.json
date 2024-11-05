@@ -17,7 +17,9 @@
     "build-mod-descriptor": "stripes mod descriptor --full --strict | jq '.[]' > module-descriptor.json ",
     "formatjs-compile": "formatjs compile-folder --ast --format simple ./translations/ui-ld-folio-wrapper ./translations/ui-ld-folio-wrapper/compiled",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "npm run test:coverage",
+    "test:unit": "jest --watch",
+    "test:coverage": "jest --ci --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
