@@ -14,4 +14,12 @@ describe('useContainerEvents', () => {
 
     expect(mockAddEventListener).toHaveBeenCalled();
   });
+
+  test('does not attach event listeners if no ref is present', () => {
+    const mockAddEventListener = jest.fn();
+
+    renderHook(() => useContainerEvents({}, {}));
+
+    expect(mockAddEventListener).not.toHaveBeenCalled();
+  });
 });
