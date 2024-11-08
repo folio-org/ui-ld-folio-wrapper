@@ -3,20 +3,13 @@ import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 import { Prompt } from "react-router";
 import useContainerEvents from "./hooks/useContainerEvents";
+import { NAVIGATION_FROM_STORAGE_KEY, CUSTOM_EVENTS } from './constants/common';
 import css from "./index.css";
+import useCreateContainerEvents from "./hooks/useCreateContainerEvents";
 
-const NAVIGATION_FROM_STORAGE_KEY = 'ldeNavigationFrom';
 const ROUTE_PREFIX = "/linked-data-editor";
 const HOMEPAGE_URI = "/search";
 // const SEARCH_VIEW_ELEM_ID = "ld-search-container";
-const CUSTOM_EVENTS = {
-  BLOCK_NAVIGATION: "blocknavigation",
-  UNBLOCK_NAVIGATION: "unblocknavigation",
-  PROCEED_NAVIGATION: "proceednavigation",
-  TRIGGER_MODAL: "triggermodal",
-  NAVIGATE_TO_ORIGIN: "navigatetoorigin",
-  DROP_NAVIGATE_TO_ORIGIN: "dropnavigatetoorigin",
-};
 
 const Wrapper = ({
   stripes: {
@@ -30,6 +23,10 @@ const Wrapper = ({
   const [lastLocation, setLastLocation] = useState(null);
   const [confirmedNavigation, setConfirmedNavigation] = useState(false);
   const marvaComponent = useRef(null);
+  const { eventsMap } = useCreateContainerEvents({ history, setIsBlocking, setConfirmedNavigation });
+
+  useContainerEvents(marvaComponent, eventsMap);
+
   const config = {
     locale,
     timezone,
@@ -39,37 +36,6 @@ const Wrapper = ({
     customEvents: CUSTOM_EVENTS,
     navigationOrigin: history.location.state?.from ?? localStorage.getItem(NAVIGATION_FROM_STORAGE_KEY),
   };
-
-  const blockNavigation = () => {
-    setIsBlocking(true);
-    setConfirmedNavigation(false);
-  };
-  const unblockNavigation = () => setIsBlocking(false);
-  const proceedNavigation = () => {
-    setIsBlocking(false);
-    setConfirmedNavigation(true);
-  };
-  const navigateToOrigin = () => {
-    const storedLocation = localStorage.getItem(NAVIGATION_FROM_STORAGE_KEY);
-    const { pathname, search } = history.location.state?.from ?? ((storedLocation && JSON.parse(storedLocation)) ?? {});
-
-    if (pathname && history.location.pathname !== pathname) {
-      history.push({ pathname, search });
-    }
-  };
-  const dropNavigateToOrigin = () => {
-    localStorage.removeItem(NAVIGATION_FROM_STORAGE_KEY);
-  };
-
-  const eventsMap = {
-    [CUSTOM_EVENTS.BLOCK_NAVIGATION]: blockNavigation,
-    [CUSTOM_EVENTS.UNBLOCK_NAVIGATION]: unblockNavigation,
-    [CUSTOM_EVENTS.PROCEED_NAVIGATION]: proceedNavigation,
-    [CUSTOM_EVENTS.NAVIGATE_TO_ORIGIN]: navigateToOrigin,
-    [CUSTOM_EVENTS.DROP_NAVIGATE_TO_ORIGIN]: dropNavigateToOrigin,
-  };
-
-  useContainerEvents(marvaComponent, eventsMap);
 
   useEffect(() => {
     if (history.location.state?.from) {
