@@ -1,6 +1,10 @@
-import { render } from '@folio/jest-config-stripes/testing-library/react';
+import {
+  render,
+} from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import Wrapper from './Wrapper';
+
+jest.mock('@folio/linked-data', () => jest.fn());
 
 describe('Wrapper', () => {
   test('sets navigation origin into localstorage', () => {
