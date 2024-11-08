@@ -40,7 +40,7 @@ const Wrapper = ({
   useEffect(() => {
     if (history.location.state?.from) {
       localStorage.setItem(NAVIGATION_FROM_STORAGE_KEY, JSON.stringify(history.location.state?.from));
-    } else if (history.location.pathname.includes(EXTERNAL_RESOURCE_PATH_BIT)) {
+    } else if (history.location.pathname?.includes(EXTERNAL_RESOURCE_PATH_BIT)) {
       history.replace({ pathname: `${ROUTE_PREFIX}${HOMEPAGE_URI}` });
     }
   }, [history.location.state?.from]);
