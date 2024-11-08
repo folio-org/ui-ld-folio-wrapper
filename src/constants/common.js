@@ -8,3 +8,5 @@ export const CUSTOM_EVENTS = {
   NAVIGATE_TO_ORIGIN: 'navigatetoorigin',
   DROP_NAVIGATE_TO_ORIGIN: 'dropnavigatetoorigin',
 };
+
+export const EXTERNAL_RESOURCE_PATH_BIT = '/external';

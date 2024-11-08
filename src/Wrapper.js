@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 import { Prompt } from "react-router";
 import useContainerEvents from "./hooks/useContainerEvents";
-import { NAVIGATION_FROM_STORAGE_KEY, CUSTOM_EVENTS } from './constants/common';
+import { NAVIGATION_FROM_STORAGE_KEY, CUSTOM_EVENTS, EXTERNAL_RESOURCE_PATH_BIT } from './constants/common';
 import css from "./index.css";
 import useCreateContainerEvents from "./hooks/useCreateContainerEvents";
 
@@ -40,6 +40,8 @@ const Wrapper = ({
   useEffect(() => {
     if (history.location.state?.from) {
       localStorage.setItem(NAVIGATION_FROM_STORAGE_KEY, JSON.stringify(history.location.state?.from));
+    } else if (history.location.pathname.includes(EXTERNAL_RESOURCE_PATH_BIT)) {
+      history.replace({ pathname: `${ROUTE_PREFIX}${HOMEPAGE_URI}` });
     }
   }, [history.location.state?.from]);
 
