@@ -1,9 +1,10 @@
 import "@folio/linked-data";
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
-import { Prompt, useHistory } from "react-router";
+import { Prompt } from "react-router";
 import css from "./index.css";
 
+const NAVIGATION_FROM_STORAGE_KEY = 'ldeNavigationFrom';
 const ROUTE_PREFIX = "/linked-data-editor";
 const HOMEPAGE_URI = "/search";
 // const SEARCH_VIEW_ELEM_ID = "ld-search-container";
@@ -12,6 +13,8 @@ const CUSTOM_EVENTS = {
   UNBLOCK_NAVIGATION: "unblocknavigation",
   PROCEED_NAVIGATION: "proceednavigation",
   TRIGGER_MODAL: "triggermodal",
+  NAVIGATE_TO_ORIGIN: "navigatetoorigin",
+  DROP_NAVIGATE_TO_ORIGIN: "dropnavigatetoorigin",
 };
 
 const Wrapper = ({
@@ -20,12 +23,12 @@ const Wrapper = ({
     timezone,
     okapi: { url, tenant, token },
   },
+  history,
 }) => {
   const [isBlocking, setIsBlocking] = useState(false);
   const [lastLocation, setLastLocation] = useState(null);
   const [confirmedNavigation, setConfirmedNavigation] = useState(false);
   const marvaComponent = useRef(null);
-  const history = useHistory();
   const config = {
     locale,
     timezone,
@@ -33,28 +36,49 @@ const Wrapper = ({
     tenant,
     token,
     customEvents: CUSTOM_EVENTS,
+    navigationOrigin: history.location.state?.from ?? localStorage.getItem(NAVIGATION_FROM_STORAGE_KEY),
   };
 
   useEffect(() => {
+    if (history.location.state?.from) {
+      localStorage.setItem(NAVIGATION_FROM_STORAGE_KEY, JSON.stringify(history.location.state?.from));
+    }
+  }, [history.location.state?.from]);
+
+  useEffect(() => {
     if (marvaComponent?.current) {
-      marvaComponent.current.addEventListener(
-        CUSTOM_EVENTS.BLOCK_NAVIGATION,
-        () => {
-          setIsBlocking(true);
-          setConfirmedNavigation(false);
+      const blockNavigation = () => {
+        setIsBlocking(true);
+        setConfirmedNavigation(false);
+      };
+      const unblockNavigation = () => setIsBlocking(false);
+      const proceedNavigation = () => {
+        setIsBlocking(false);
+        setConfirmedNavigation(true);
+      };
+      const navigateToOrigin = () => {
+        const storedLocation = localStorage.getItem(NAVIGATION_FROM_STORAGE_KEY);
+        const { pathname, search } = history.location.state?.from ?? ((storedLocation && JSON.parse(storedLocation)) ?? {});
+
+        if (pathname && history.location.pathname !== pathname) {
+          history.push({ pathname, search });
         }
-      );
-      marvaComponent.current.addEventListener(
-        CUSTOM_EVENTS.UNBLOCK_NAVIGATION,
-        () => setIsBlocking(false)
-      );
-      marvaComponent.current.addEventListener(
-        CUSTOM_EVENTS.PROCEED_NAVIGATION,
-        () => {
-          setIsBlocking(false);
-          setConfirmedNavigation(true);
-        }
-      );
+      };
+      const dropNavigateToOrigin = () => {
+        localStorage.removeItem(NAVIGATION_FROM_STORAGE_KEY);
+      };
+
+      const eventsMap = {
+        [CUSTOM_EVENTS.BLOCK_NAVIGATION]: blockNavigation,
+        [CUSTOM_EVENTS.UNBLOCK_NAVIGATION]: unblockNavigation,
+        [CUSTOM_EVENTS.PROCEED_NAVIGATION]: proceedNavigation,
+        [CUSTOM_EVENTS.NAVIGATE_TO_ORIGIN]: navigateToOrigin,
+        [CUSTOM_EVENTS.DROP_NAVIGATE_TO_ORIGIN]: dropNavigateToOrigin,
+      };
+
+      for (const [eventName, eventHandler] of Object.entries(eventsMap)) {
+        marvaComponent.current.addEventListener(eventName, eventHandler);
+      }
     }
   }, [marvaComponent]);
 
@@ -112,6 +136,7 @@ const Wrapper = ({
 
 Wrapper.propTypes = {
   stripes: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default Wrapper;
