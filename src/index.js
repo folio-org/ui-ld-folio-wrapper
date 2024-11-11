@@ -3,7 +3,6 @@ import 'regenerator-runtime/runtime';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
-import Settings from './settings';
 import './index.css';
 
 class Marva extends React.Component {
@@ -21,17 +20,6 @@ class Marva extends React.Component {
   }
 
   render() {
-    const {
-      showSettings,
-      match: {
-        path
-      }
-    } = this.props;
-
-    if (showSettings) {
-      return <Settings {...this.props} />;
-    }
-
     return (
       <this.connectedApp {...this.props} />
     );

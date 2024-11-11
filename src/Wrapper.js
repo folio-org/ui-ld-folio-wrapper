@@ -1,18 +1,15 @@
 import "@folio/linked-data";
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
-import { Prompt, useHistory } from "react-router";
+import { Prompt } from "react-router";
+import useContainerEvents from "./hooks/useContainerEvents";
+import { NAVIGATION_FROM_STORAGE_KEY, CUSTOM_EVENTS, EXTERNAL_RESOURCE_PATH_BIT } from './constants/common';
 import css from "./index.css";
+import useCreateContainerEvents from "./hooks/useCreateContainerEvents";
 
 const ROUTE_PREFIX = "/linked-data-editor";
 const HOMEPAGE_URI = "/search";
 // const SEARCH_VIEW_ELEM_ID = "ld-search-container";
-const CUSTOM_EVENTS = {
-  BLOCK_NAVIGATION: "blocknavigation",
-  UNBLOCK_NAVIGATION: "unblocknavigation",
-  PROCEED_NAVIGATION: "proceednavigation",
-  TRIGGER_MODAL: "triggermodal",
-};
 
 const Wrapper = ({
   stripes: {
@@ -20,12 +17,16 @@ const Wrapper = ({
     timezone,
     okapi: { url, tenant, token },
   },
+  history,
 }) => {
   const [isBlocking, setIsBlocking] = useState(false);
   const [lastLocation, setLastLocation] = useState(null);
   const [confirmedNavigation, setConfirmedNavigation] = useState(false);
   const marvaComponent = useRef(null);
-  const history = useHistory();
+  const { eventsMap } = useCreateContainerEvents({ history, setIsBlocking, setConfirmedNavigation });
+
+  useContainerEvents(marvaComponent, eventsMap);
+
   const config = {
     locale,
     timezone,
@@ -33,30 +34,16 @@ const Wrapper = ({
     tenant,
     token,
     customEvents: CUSTOM_EVENTS,
+    navigationOrigin: history.location.state?.from ?? localStorage.getItem(NAVIGATION_FROM_STORAGE_KEY),
   };
 
   useEffect(() => {
-    if (marvaComponent?.current) {
-      marvaComponent.current.addEventListener(
-        CUSTOM_EVENTS.BLOCK_NAVIGATION,
-        () => {
-          setIsBlocking(true);
-          setConfirmedNavigation(false);
-        }
-      );
-      marvaComponent.current.addEventListener(
-        CUSTOM_EVENTS.UNBLOCK_NAVIGATION,
-        () => setIsBlocking(false)
-      );
-      marvaComponent.current.addEventListener(
-        CUSTOM_EVENTS.PROCEED_NAVIGATION,
-        () => {
-          setIsBlocking(false);
-          setConfirmedNavigation(true);
-        }
-      );
+    if (history.location.state?.from) {
+      localStorage.setItem(NAVIGATION_FROM_STORAGE_KEY, JSON.stringify(history.location.state?.from));
+    } else if (history.location.pathname?.includes(EXTERNAL_RESOURCE_PATH_BIT)) {
+      history.replace({ pathname: `${ROUTE_PREFIX}${HOMEPAGE_URI}` });
     }
-  }, [marvaComponent]);
+  }, [history.location.state?.from]);
 
   useEffect(() => {
     if (confirmedNavigation && lastLocation) {
@@ -112,6 +99,7 @@ const Wrapper = ({
 
 Wrapper.propTypes = {
   stripes: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 export default Wrapper;
