@@ -102,6 +102,7 @@
         "visible": true,
         "subPermissions": [
           "module.ld-folio-wrapper.enabled",
+          "linked-data.authority-assignment-check.post",
           "linked-data.resources.bib.get",
           "linked-data.resources.bib.post",
           "linked-data.resources.bib.put",
