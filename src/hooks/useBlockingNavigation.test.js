@@ -11,7 +11,7 @@ import useBlockingNavigation from './useBlockingNavigation';
 jest.mock('./useCreateContainerEvents', () => () => ({
   eventsMap: {},
 }));
-jest.mock('./useContainerEvents', jest.fn);
+jest.mock('./useContainerEvents', () => jest.fn());
 
 describe('useBlockingNavigation', () => {
   let historyMock;
