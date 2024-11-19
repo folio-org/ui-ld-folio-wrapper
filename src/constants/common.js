@@ -10,3 +10,6 @@ export const CUSTOM_EVENTS = {
 };
 
 export const EXTERNAL_RESOURCE_PATH_BIT = '/external';
+
+export const ROUTE_PREFIX = '/linked-data-editor';
+export const HOMEPAGE_URI = '/search';
