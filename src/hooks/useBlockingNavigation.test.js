@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderHook, act } from '@testing-library/react';
+import { renderHook } from '@testing-library/react';
 import {
   NAVIGATION_FROM_STORAGE_KEY,
   EXTERNAL_RESOURCE_PATH_BIT,
@@ -11,8 +11,7 @@ import useBlockingNavigation from './useBlockingNavigation';
 jest.mock('./useCreateContainerEvents', () => () => ({
   eventsMap: {},
 }));
-
-jest.mock('./useContainerEvents', () => jest.fn());
+jest.mock('./useContainerEvents', jest.fn);
 
 describe('useBlockingNavigation', () => {
   let historyMock;
