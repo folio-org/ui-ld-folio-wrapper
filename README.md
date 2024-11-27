@@ -14,7 +14,6 @@ This module acts as an adapter for [ui-linked-data](https://github.com/folio-org
 
 If you would like to run a development build of this module while making changes to the [ui-linked-data](https://github.com/folio-org/ui-linked-data) within it, there are a few steps to take:
 
-0. 
 1. Clone the [ui-linked-data](https://github.com/folio-org/ui-linked-data) module repository to your computer.
 2. Within the cloned [ui-linked-data](https://github.com/folio-org/ui-linked-data) module directory, run:
     ```sh
