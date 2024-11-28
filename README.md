@@ -6,7 +6,7 @@ This software is distributed under the terms of the Apache License, Version 2.0.
 
 ## Introduction
 
-This is a [Stripes](https://github.com/folio-org/stripes-core/) UI module for handling operations with Linked data resources.
+This is a [Stripes](https://github.com/folio-org/stripes-core/) UI module designed for performing operations on a library's Linked Data resources.
 
 This module acts as an adapter for [ui-linked-data](https://github.com/folio-org/ui-linked-data) module. Essentially, most of the functionality of this module is defined there.
 
