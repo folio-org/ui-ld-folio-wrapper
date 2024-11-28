@@ -1,4 +1,4 @@
-# ui-linked-data
+# ui-ld-folio-wrapper
 
 © 2024 EBSCO Information Services.
 
