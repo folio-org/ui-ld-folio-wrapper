@@ -29,7 +29,9 @@ If you would like to run a development build of this module while making changes
 
 ## Additional information
 
-See the related [ui-linked-data](https://github.com/folio-org/ui-linked-data) module.
+## Additional information
+See the related [ui-linked-data](https://github.com/folio-org/ui-linked-data) application.
+Backend module corresponding to this UI module: [mod-linked-data](https://github.com/folio-org/mod-linked-data)
 
 Other [modules](https://dev.folio.org/source-code/#client-side).
 
