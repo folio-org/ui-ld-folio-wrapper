@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 import Wrapper from './Wrapper';
 import './index.css';
 
-class Marva extends React.Component {
+class LinkedDataEditor extends React.Component {
   static propTypes = {
     match: PropTypes.object.isRequired,
     showSettings: PropTypes.bool,
     stripes: PropTypes.shape({
-      connect: PropTypes.func
-    })
+      connect: PropTypes.func,
+    }),
   };
 
   constructor(props) {
@@ -20,10 +20,10 @@ class Marva extends React.Component {
   }
 
   render() {
-    return (
-      <this.connectedApp {...this.props} />
-    );
+    const App = this.connectedApp;
+
+    return <App {...this.props} />;
   }
 }
 
-export default Marva;
+export default LinkedDataEditor;
