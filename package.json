@@ -78,7 +78,7 @@
       "app",
       "settings"
     ],
-    "displayName": "Linked data editor",
+    "displayName": "ui-ld-folio-wrapper.meta.title",
     "route": "/linked-data-editor",
     "home": "/linked-data-editor/search",
     "icons": [
