@@ -75,20 +75,23 @@
   },
   "stripes": {
     "actsAs": [
-      "app",
-      "settings"
+      "app"
     ],
-    "displayName": "Linked data editor",
+    "displayName": "ui-ld-folio-wrapper.meta.title",
     "route": "/linked-data-editor",
     "home": "/linked-data-editor/search",
+    "hasSettings": false,
     "icons": [
       {
         "name": "app",
-        "alt": "",
+        "alt": "Linked data editor",
         "title": "Linked data editor"
       }
     ],
-    "okapiInterfaces": {},
+    "okapiInterfaces": {
+      "linked-data": "1.0",
+      "search": "1.3"
+    },
     "permissionSets": [
       {
         "permissionName": "module.ld-folio-wrapper.enabled",
@@ -117,13 +120,6 @@
           "linked-data.profiles.get",
           "search.linked-data.work.collection.get",
           "search.linked-data.authority.collection.get"
-        ]
-      },
-      {
-        "permissionName": "settings.ld-folio-wrapper.enabled",
-        "displayName": "Settings (Linked Data): display list of settings pages",
-        "subPermissions": [
-          "settings.enabled"
         ]
       }
     ]
