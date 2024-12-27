@@ -118,8 +118,7 @@
           "linked-data.resources.preview.get",
           "linked-data.resources.import.post",
           "linked-data.profiles.get",
-          "search.linked-data.work.collection.get",
-          "search.linked-data.authority.collection.get"
+          "search.linked-data.work.collection.get"
         ]
       }
     ]
