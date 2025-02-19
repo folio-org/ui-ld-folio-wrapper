@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import useContainerEvents from './useContainerEvents';
 import {
   NAVIGATION_FROM_STORAGE_KEY,
@@ -9,11 +9,10 @@ import {
 } from '../constants/common';
 import useCreateContainerEvents from './useCreateContainerEvents';
 
-const useBlockingNavigation = (history) => {
+const useBlockingNavigation = (history, marvaComponent) => {
   const [isBlocking, setIsBlocking] = useState(false);
   const [lastLocation, setLastLocation] = useState(null);
   const [confirmedNavigation, setConfirmedNavigation] = useState(false);
-  const marvaComponent = useRef(null);
   const { eventsMap } = useCreateContainerEvents({
     history,
     setIsBlocking,
