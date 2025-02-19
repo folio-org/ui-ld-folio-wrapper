@@ -17,7 +17,7 @@ const Wrapper = ({
   history,
 }) => {
   const marvaComponent = useRef(null);
-  const { isBlocking, handleBlockedNavigation } = useBlockingNavigation(history);
+  const { isBlocking, handleBlockedNavigation } = useBlockingNavigation(history, marvaComponent);
 
   const config = {
     locale,
