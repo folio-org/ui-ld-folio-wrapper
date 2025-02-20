@@ -34,8 +34,6 @@ describe('useBlockingNavigation', () => {
       },
     };
 
-    jest.spyOn(React, 'useRef').mockReturnValue(marvaComponentRef);
-
     jest.spyOn(Storage.prototype, 'setItem');
   });
 
@@ -44,7 +42,7 @@ describe('useBlockingNavigation', () => {
   });
 
   it('initializes isBlocking to false', () => {
-    const { result } = renderHook(() => useBlockingNavigation(historyMock));
+    const { result } = renderHook(() => useBlockingNavigation(historyMock, marvaComponentRef));
 
     expect(result.current.isBlocking).toBe(false);
   });
@@ -52,7 +50,7 @@ describe('useBlockingNavigation', () => {
   it('sets NAVIGATION_FROM_STORAGE_KEY when history.location.state.from exists', () => {
     historyMock.location.state = { from: '/previous-path' };
 
-    renderHook(() => useBlockingNavigation(historyMock));
+    renderHook(() => useBlockingNavigation(historyMock, marvaComponentRef));
 
     expect(localStorage.setItem).toHaveBeenCalledWith(
       NAVIGATION_FROM_STORAGE_KEY,
@@ -63,7 +61,7 @@ describe('useBlockingNavigation', () => {
   it('replaces pathname when it includes EXTERNAL_RESOURCE_PATH_BIT', () => {
     historyMock.location.pathname = `/some-path/${EXTERNAL_RESOURCE_PATH_BIT}`;
 
-    renderHook(() => useBlockingNavigation(historyMock));
+    renderHook(() => useBlockingNavigation(historyMock, marvaComponentRef));
 
     expect(historyMock.replace).toHaveBeenCalledWith({
       pathname: `${ROUTE_PREFIX}${HOMEPAGE_URI}`,
@@ -73,13 +71,13 @@ describe('useBlockingNavigation', () => {
   it('remounts marvaComponent when pathname includes HOMEPAGE_URI', () => {
     historyMock.location.pathname = `${ROUTE_PREFIX}${HOMEPAGE_URI}`;
 
-    renderHook(() => useBlockingNavigation(historyMock));
+    renderHook(() => useBlockingNavigation(historyMock, marvaComponentRef));
 
     expect(marvaComponentRef.current.remount).toHaveBeenCalled();
   });
 
   it('returns true from handleBlockedNavigation when isBlocking is false', () => {
-    const { result } = renderHook(() => useBlockingNavigation(historyMock));
+    const { result } = renderHook(() => useBlockingNavigation(historyMock, marvaComponentRef));
 
     const nextLocation = { pathname: '/next-path' };
     const canNavigate = result.current.handleBlockedNavigation(nextLocation);
