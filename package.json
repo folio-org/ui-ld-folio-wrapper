@@ -5,7 +5,7 @@
   "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
   "publishConfig": {
-    "registry": "https://repository.folio.org/repository/npm-folioci/"
+    "registry": "https://repository.folio.org/repository/npm-folio/"
   },
   "license": "Apache-2.0",
   "engines": {
