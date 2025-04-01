@@ -1,7 +1,7 @@
 {
   "name": "@folio/ld-folio-wrapper",
   "repository": "@folio/ui-ld-folio-wrapper",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
   "publishConfig": {
@@ -90,7 +90,9 @@
     ],
     "okapiInterfaces": {
       "linked-data": "1.0",
-      "search": "1.3"
+      "search": "1.3",
+      "authority-source-files": "2.2",
+      "source-storage-records": "3.4"
     },
     "permissionSets": [
       {
@@ -105,6 +107,7 @@
         "visible": true,
         "subPermissions": [
           "module.ld-folio-wrapper.enabled",
+          "inventory-storage.authority-source-files.collection.get",
           "linked-data.authority-assignment-check.post",
           "linked-data.resources.bib.get",
           "linked-data.resources.bib.post",
@@ -118,7 +121,10 @@
           "linked-data.resources.preview.get",
           "linked-data.resources.import.post",
           "linked-data.profiles.get",
-          "search.linked-data.work.collection.get"
+          "search.linked-data.work.collection.get",
+          "search.authorities.collection.get",
+          "search.facets.collection.get",
+          "source-storage.records.formatted.item.get"
         ]
       }
     ]
