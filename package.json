@@ -60,7 +60,7 @@
     "regenerator-runtime": "^0.13.3"
   },
   "dependencies": {
-    "@folio/linked-data": "^1.0.2",
+    "@folio/linked-data": "^1.0.3",
     "prop-types": "^15.6.0"
   },
   "resolutions": {
