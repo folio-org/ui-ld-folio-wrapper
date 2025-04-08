@@ -1,4 +1,6 @@
-## 1.3.1 (IN PROGRESS)
+## 1.3.2 (IN PROGRESS)
+
+## 1.3.1 (2025-04-08)
 * Add Authority search and browse permissions to "Cataloger - Linked Data Editor" role. Fixes [UILD-527]
 * Bump ui-linked-data version to 1.0.3
 
