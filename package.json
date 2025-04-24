@@ -1,7 +1,7 @@
 {
   "name": "@folio/ld-folio-wrapper",
   "repository": "@folio/ui-ld-folio-wrapper",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
   "publishConfig": {
@@ -60,7 +60,7 @@
     "regenerator-runtime": "^0.13.3"
   },
   "dependencies": {
-    "@folio/linked-data": "^1.0.3",
+    "@folio/linked-data": "^1.0.4",
     "prop-types": "^15.6.0"
   },
   "resolutions": {
