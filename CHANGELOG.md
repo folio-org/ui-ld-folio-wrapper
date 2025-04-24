@@ -1,3 +1,8 @@
+## 1.3.3 (IN PROGRESS)
+* Fix navigation handling to include search parameters when pushing last location. Fixes [UILD-531]
+
+[UILD-531]: https://folio-org.atlassian.net/browse/UILD-531
+
 ## 1.3.2 (IN PROGRESS)
 
 ## 1.3.1 (2025-04-08)
