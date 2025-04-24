@@ -36,7 +36,7 @@ const useBlockingNavigation = (history, marvaComponent) => {
 
   useEffect(() => {
     if (confirmedNavigation && lastLocation) {
-      history.push(lastLocation.pathname);
+      history.push(`${lastLocation.pathname}${lastLocation.search}`);
     }
   }, [confirmedNavigation, history, lastLocation]);
 
