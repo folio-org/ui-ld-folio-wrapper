@@ -1,5 +1,10 @@
-## 1.3.3 (IN PROGRESS)
+# Change history for ui-ld-folio-wrapper
+
+## 1.3.4 (IN PROGRESS)
+
+## 1.3.3 (2025-04-30)
 * Fix navigation handling to include search parameters when pushing last location. Fixes [UILD-531]
+* Bump ui-linked-data version to 1.0.5
 
 [UILD-531]: https://folio-org.atlassian.net/browse/UILD-531
 
