@@ -1,6 +1,7 @@
 # Change history for ui-ld-folio-wrapper
 
-## 1.3.4 (IN PROGRESS)
+## 2.0.0 (IN PROGRESS)
+* Bump ui-linked-data version to 2.0.0
 
 ## 1.3.3 (2025-04-30)
 * Fix navigation handling to include search parameters when pushing last location. Fixes [UILD-531]
