@@ -89,7 +89,7 @@
       }
     ],
     "okapiInterfaces": {
-      "linked-data": "1.0",
+      "linked-data": "2.0",
       "search": "1.3",
       "browse": "2.0",
       "authority-source-files": "2.2",
