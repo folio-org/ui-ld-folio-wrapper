@@ -5,9 +5,11 @@
 * Bump up the version of search to 1.4
 * Include linked-data-profile okapi interface and associated permissions in ModuleDescriptor [UILD-571]
 * Remove obsolete permission `linked-data.profiles.get` [UILD-588]
+* *BREAKING* Update okapiInterfaces for Split Search & Browse APIs. [UILD-595]
 
 [UILD-571]: https://folio-org.atlassian.net/browse/UILD-571
 [UILD-588]: https://folio-org.atlassian.net/browse/UILD-588
+[UILD-595]: https://folio-org.atlassian.net/browse/UILD-595
 
 ## 1.3.3 (2025-04-30)
 * Fix navigation handling to include search parameters when pushing last location. Fixes [UILD-531]
