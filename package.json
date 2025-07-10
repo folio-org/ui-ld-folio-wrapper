@@ -91,8 +91,9 @@
     "okapiInterfaces": {
       "linked-data": "2.0",
       "linked-data-profile": "1.0",
-      "search": "1.4",
-      "browse": "2.0",
+      "search-linked-data": "1.0",
+      "search-authorities": "1.0",
+      "browse-authorities": "1.0",
       "authority-source-files": "2.2",
       "source-storage-records": "3.4"
     },
