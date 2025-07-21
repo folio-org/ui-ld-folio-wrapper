@@ -114,6 +114,7 @@
           "browse.authorities.collection.get",
           "inventory-storage.authority-source-files.collection.get",
           "linked-data.authority-assignment-check.post",
+          "linked-data.import.file.post",
           "linked-data.profiles.item.get",
           "linked-data.profiles.metadata.get",
           "linked-data.profiles.preferred.get",
