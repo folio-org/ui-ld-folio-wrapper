@@ -16,6 +16,7 @@ module.exports = {
   transformIgnorePatterns: [`/node_modules/(?!${esModules})`],
   moduleNameMapper: {
     '^.+\\.(css|png|svg)$': 'identity-obj-proxy',
+    '@folio/linked-data': '<rootDir>/test/jest/__mock__/linked-data.mock.js'
   },
   testEnvironment: 'jsdom',
   testMatch: ['**/(lib|src)/**/?(*.)test.{js,jsx}'],
