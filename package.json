@@ -118,6 +118,8 @@
           "linked-data.profiles.metadata.get",
           "linked-data.profiles.preferred.get",
           "linked-data.profiles.preferred.post",
+          "linked-data.profiles.settings.get",
+          "linked-data.profiles.settings.post",
           "linked-data.resources.bib.delete",
           "linked-data.resources.bib.get",
           "linked-data.resources.bib.id.get",
