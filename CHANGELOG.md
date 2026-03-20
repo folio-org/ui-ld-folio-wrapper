@@ -14,7 +14,6 @@
 * Add `linked-data.hub.preview.get` and `linked-data.hub.import.post` permissions to ModuleDescriptor. [UILD-725]
 * Add `linked-data.import.file.post` and `linked-data.import.url.post` permissions to ModuleDescriptor. [UILD-747]
 
-
 [UILD-571]: https://folio-org.atlassian.net/browse/UILD-571
 [UILD-588]: https://folio-org.atlassian.net/browse/UILD-588
 [UILD-595]: https://folio-org.atlassian.net/browse/UILD-595
