@@ -12,6 +12,8 @@
 * Rename Linked Data Editor App label back to "Linked Data Editor". [UILD-670]
 * Add `linked-data.profiles.settings.get` and `linked-data.profiles.settings.post` permissions to ModuleDescriptor. [UILD-684]
 * Add `linked-data.hub.preview.get` and `linked-data.hub.import.post` permissions to ModuleDescriptor. [UILD-725]
+* Add `linked-data.import.file.post` and `linked-data.import.url.post` permissions to ModuleDescriptor. [UILD-747]
+
 
 [UILD-571]: https://folio-org.atlassian.net/browse/UILD-571
 [UILD-588]: https://folio-org.atlassian.net/browse/UILD-588
@@ -22,6 +24,7 @@
 [UILD-670]: https://folio-org.atlassian.net/browse/UILD-670
 [UILD-684]: https://folio-org.atlassian.net/browse/UILD-684
 [UILD-725]: https://folio-org.atlassian.net/browse/UILD-725
+[UILD-757]: https://folio-org.atlassian.net/browse/UILD-757
 
 ## 1.3.3 (2025-04-30)
 * Fix navigation handling to include search parameters when pushing last location. Fixes [UILD-531]
