@@ -116,6 +116,8 @@
           "linked-data.authority-assignment-check.post",
           "linked-data.hub.preview.get",
           "linked-data.hub.import.post",
+          "linked-data.import.file.post",
+          "linked-data.import.url.post",
           "linked-data.profiles.item.get",
           "linked-data.profiles.metadata.get",
           "linked-data.profiles.preferred.get",
