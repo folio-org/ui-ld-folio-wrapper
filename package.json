@@ -136,6 +136,7 @@
           "linked-data.resources.rdf.get",
           "linked-data.resources.reindex.post",
           "linked-data.resources.support-check.get",
+          "linked-data.vocabularies.item.get",
           "search.authorities.collection.get",
           "search.facets.collection.get",
           "search.linked-data.work.collection.get",
