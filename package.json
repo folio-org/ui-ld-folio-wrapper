@@ -84,8 +84,8 @@
     "icons": [
       {
         "name": "app",
-        "alt": "Linked data editor",
-        "title": "Linked data editor"
+        "alt": "Marigold",
+        "title": "Marigold"
       }
     ],
     "okapiInterfaces": {
