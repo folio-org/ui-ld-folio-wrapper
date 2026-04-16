@@ -15,6 +15,7 @@
 * Add `linked-data.import.file.post` and `linked-data.import.url.post` permissions to ModuleDescriptor. [UILD-747]
 * Add `linked-data.vocabularies.item.get` permission to ModuleDescriptor. [UILD-754]
 * Add new label for the editor. [UILD-771]
+* Refresh ui-linked-data.all subPermissions [UILD-791]
 
 [UILD-571]: https://folio-org.atlassian.net/browse/UILD-571
 [UILD-588]: https://folio-org.atlassian.net/browse/UILD-588
@@ -28,6 +29,7 @@
 [UILD-757]: https://folio-org.atlassian.net/browse/UILD-757
 [UILD-754]: https://folio-org.atlassian.net/browse/UILD-754
 [UILD-771]: https://folio-org.atlassian.net/browse/UILD-771
+[UILD-791]: https://folio-org.atlassian.net/browse/UILD-791
 
 ## 1.3.3 (2025-04-30)
 * Fix navigation handling to include search parameters when pushing last location. Fixes [UILD-531]
