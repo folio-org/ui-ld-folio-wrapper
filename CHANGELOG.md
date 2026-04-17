@@ -1,6 +1,6 @@
 # Change history for ui-ld-folio-wrapper
 
-## 2.0.1 (IN PROGRESS)
+## 3.0.0 (IN PROGRESS)
 
 ## 2.0.0 (2026-04-17)
 * Bump ui-linked-data version to 2.0.0
