@@ -1,6 +1,8 @@
 # Change history for ui-ld-folio-wrapper
 
-## 2.0.0 (IN PROGRESS)
+## 2.0.1 (IN PROGRESS)
+
+## 2.0.0 (2026-04-17)
 * Bump ui-linked-data version to 2.0.0
 * Bump up the version of search to 1.4
 * Include linked-data-profile okapi interface and associated permissions in ModuleDescriptor [UILD-571]
