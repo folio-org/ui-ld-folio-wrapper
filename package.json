@@ -106,13 +106,18 @@
         "subPermissions": []
       },
       {
-        "permissionName": "ui-marigold.cataloger",
+        "permissionName": "ui-marigold.cataloger.all",
         "displayName": "Marigold: Cataloger permissions",
+        "replaces": ["ui-linked-data.all"],
         "visible": true,
         "subPermissions": [
           "module.ld-folio-wrapper.enabled",
           "browse.authorities.collection.get",
           "inventory-storage.authority-source-files.collection.get",
+          "inventory.instances.item.get",
+          "inventory.instances.item.post",
+          "inventory.instances.item.patch.execute",
+          "inventory.instances.item.put",
           "linked-data.authority-assignment-check.post",
           "linked-data.hub.preview.get",
           "linked-data.hub.import.post",
