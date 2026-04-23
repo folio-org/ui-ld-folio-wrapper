@@ -2,6 +2,9 @@
 
 ## 3.0.0 (IN PROGRESS)
 
+## 2.0.1 (2026-04-23)
+* Bump ui-linked-data version to 2.0.1
+
 ## 2.0.0 (2026-04-17)
 * Bump ui-linked-data version to 2.0.0
 * Bump up the version of search to 1.4
