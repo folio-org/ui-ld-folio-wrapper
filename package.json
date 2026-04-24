@@ -1,7 +1,7 @@
 {
   "name": "@folio/ld-folio-wrapper",
   "repository": "@folio/ui-ld-folio-wrapper",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Linked Data Editor - Folio Wrapper",
   "main": "src/index.js",
   "publishConfig": {
