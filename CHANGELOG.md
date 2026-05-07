@@ -2,6 +2,9 @@
 
 ## 3.0.0 (IN PROGRESS)
 
+## 2.0.2 (2026-05-07)
+* Bump ui-linked-data version to 2.0.2
+
 ## 2.0.1 (2026-04-23)
 * Bump ui-linked-data version to 2.0.1
 
