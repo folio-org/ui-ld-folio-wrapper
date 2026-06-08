@@ -2,6 +2,9 @@
 
 ## 3.0.0 (IN PROGRESS)
 
+## 2.0.5 (2026-06-03)
+* Bump ui-linked-data version to 2.0.4 in package.json
+
 ## 2.0.4 (2026-05-21)
 * Bump ui-linked-data version to 2.0.3 in package.json
 
