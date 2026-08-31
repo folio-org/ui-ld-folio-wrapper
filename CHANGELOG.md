@@ -2,6 +2,12 @@
 
 ## 3.0.0 (IN PROGRESS)
 
+## 2.0.6 (2026-08-28)
+* Bump ui-linked-data version to 2.0.5 in package.json
+* Fix multiple settings per profile. Refs [UILD-780].
+
+[UILD-780]: https://folio-org.atlassian.net/browse/UILD-780
+
 ## 2.0.5 (2026-06-03)
 * Bump ui-linked-data version to 2.0.4 in package.json
 
