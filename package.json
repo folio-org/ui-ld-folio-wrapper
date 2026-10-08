@@ -22,13 +22,13 @@
     "test:coverage": "jest --ci --coverage"
   },
   "devDependencies": {
-    "@babel/core": "^8.0.6",
+    "@babel/core": "^7.9.0",
     "@babel/eslint-parser": "^7.15.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-decorators": "^8.0.2",
-    "@babel/plugin-transform-runtime": "^8.0.6",
-    "@babel/preset-env": "^8.0.6",
-    "@babel/preset-react": "^8.0.1",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.9.0",
     "@folio/eslint-config-stripes": "^8.0.0",
     "@folio/stripes": "^10.0.0",
     "@folio/stripes-cli": "^4.0.0",
@@ -42,7 +42,7 @@
     "babel-jest": "^30.5.2",
     "chai": "^6.2.2",
     "core-js": "^3.6.4",
-    "eslint": "^10.11.0",
+    "eslint": "^7.32.0",
     "identity-obj-proxy": "^3.0.0",
     "inflected": "^2.0.4",
     "jest": "^30.5.2",
@@ -51,12 +51,12 @@
     "jest-junit": "^17.0.0",
     "jsdom": "^30.1.1",
     "mocha": "^12.0.2",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
-    "react-intl": "^12.1.2",
-    "react-redux": "^9.3.0",
-    "react-router-dom": "^7.18.4",
-    "redux": "^5.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "^7.1.5",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.5",
     "regenerator-runtime": "^0.14.1"
   },
   "dependencies": {
@@ -69,9 +69,9 @@
   "peerDependencies": {
     "@folio/stripes": "^10.0.0",
     "react": "*",
-    "react-intl": "^12.1.2",
+    "react-intl": "^7.1.5",
     "react-router": "^5.2.0",
-    "react-router-dom": "^7.18.4"
+    "react-router-dom": "^5.0.1"
   },
   "stripes": {
     "actsAs": [
